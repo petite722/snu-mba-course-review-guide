@@ -13,64 +13,15 @@ with open(DATA_PATH, "r", encoding="utf-8") as f:
 
 st.markdown("""
 <style>
-.block-container {
-    max-width: 760px;
-    padding-top: 1.1rem;
-    padding-bottom: 1.6rem;
-}
-
-h1 {
-    font-size: 1.55rem !important;
-    margin-bottom: 0.7rem !important;
-}
-
-h2 {
-    font-size: 1.15rem !important;
-    margin-top: 1rem !important;
-    margin-bottom: 0.45rem !important;
-}
-
-h3 {
-    font-size: 1.02rem !important;
-    margin-top: 0.8rem !important;
-    margin-bottom: 0.35rem !important;
-}
-
-h4 {
-    font-size: 0.96rem !important;
-    margin-top: 0.7rem !important;
-    margin-bottom: 0.25rem !important;
-}
-
-p, li, label, span {
-    font-size: 0.86rem !important;
-    line-height: 1.42 !important;
-}
-
-div[data-testid="stMarkdownContainer"] p,
-div[data-testid="stMarkdownContainer"] li {
-    font-size: 0.86rem !important;
-    line-height: 1.42 !important;
-}
-
-div[data-testid="stSelectbox"] label,
-div[data-testid="stTextInput"] label,
-div[data-testid="stRadio"] label {
-    font-size: 0.86rem !important;
-}
-
-.stCaptionContainer p {
-    font-size: 0.78rem !important;
-}
-
-hr {
-    margin: 0.75rem 0 !important;
-}
-
-.small-note {
-    color: #666;
-    font-size: 0.78rem !important;
-}
+.block-container { max-width: 880px; padding-top: 1.6rem; padding-bottom: 2.2rem; }
+h1 { font-size: 1.9rem !important; }
+h2 { font-size: 1.32rem !important; margin-top: 1.3rem !important; }
+h3 { font-size: 1.12rem !important; margin-top: 1.1rem !important; }
+h4 { font-size: 1.02rem !important; margin-top: 1rem !important; }
+p, li, div, label { font-size: 0.96rem !important; line-height: 1.55 !important; }
+.stCaptionContainer p { font-size: 0.88rem !important; }
+hr { margin: 1rem 0; }
+.small-note { color: #666; font-size: 0.88rem; }
 </style>
 """, unsafe_allow_html=True)
 
