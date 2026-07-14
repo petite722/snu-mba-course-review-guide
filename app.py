@@ -29,7 +29,7 @@ st.title("SNU MBA Course Review Guide")
 lang = st.radio("표시 언어 / Display language", ["한국어", "English"], horizontal=True)
 
 if lang == "한국어":
-    st.caption("2025년 입학생들의 한국어/영어 수업 후기를 합산해 정리한 비공식 수강 후기 가이드입니다. 원문 후기와 기출문제 내용은 포함하지 않습니다. 한국어와 영어 화면은 같은 후기 수와 같은 내용을 기준으로 표시됩니다.")
+    st.caption("이 가이드는 2025년 입학생들의 수업 후기를 바탕으로 정리한 비공식 자료입니다. 원문 후기와 기출문제 내용은 포함하지 않았습니다.")
     download_label = "전체 수업 목록 다운로드"
     search_label = "수업 이름이나 교수님으로 찾기"
     search_placeholder = "예: 전략, Strategy, 최종학, 한정석, Operations"
@@ -38,10 +38,10 @@ if lang == "한국어":
     no_summary = "이 수업은 아직 표시할 수 있는 후기 요약이 없습니다."
     highlights = "후기에서 정리한 내용"
     reviews_word = "후기"
-    based_word = "개 기준"
+    based_word = "기준"
     final_note = "한국어/영어 후기를 합산한 같은 데이터가 언어만 바뀌어 표시됩니다. 문구를 수정하려면 source_summary_workbook.xlsx의 한국어 원문 데이터를 수정한 뒤 앱 데이터를 다시 생성하면 됩니다."
 else:
-    st.caption("This unofficial course guide is based on the combined Korean and English reviews from the 2025 MBA cohort. Original review text and past exam content are not included. The Korean and English views use the same review count and the same content, shown in different languages.")
+    st.caption("This guide is an unofficial summary based on course reviews from the 2025 MBA cohort. Original review texts and past exam materials are not included.")
     download_label = "Download full course list"
     search_label = "Find a course or professor"
     search_placeholder = "e.g., Strategy, Operations, Choi, Han, 최종학"
