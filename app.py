@@ -13,15 +13,15 @@ with open(DATA_PATH, "r", encoding="utf-8") as f:
 
 st.markdown("""
 <style>
-.block-container { max-width: 980px; padding-top: 2.2rem; padding-bottom: 3rem; }
-h1 { font-size: 2.15rem !important; }
-h2 { font-size: 1.45rem !important; margin-top: 1.6rem !important; }
-h3 { font-size: 1.20rem !important; margin-top: 1.3rem !important; }
-h4 { font-size: 1.08rem !important; margin-top: 1.15rem !important; }
-p, li, div, label { font-size: 1.05rem !important; line-height: 1.68 !important; }
-.stCaptionContainer p { font-size: 0.94rem !important; }
-hr { margin: 1.3rem 0; }
-.small-note { color: #666; font-size: 0.94rem; }
+.block-container { max-width: 880px; padding-top: 1.6rem; padding-bottom: 2.2rem; }
+h1 { font-size: 1.9rem !important; }
+h2 { font-size: 1.32rem !important; margin-top: 1.3rem !important; }
+h3 { font-size: 1.12rem !important; margin-top: 1.1rem !important; }
+h4 { font-size: 1.02rem !important; margin-top: 1rem !important; }
+p, li, div, label { font-size: 0.96rem !important; line-height: 1.55 !important; }
+.stCaptionContainer p { font-size: 0.88rem !important; }
+hr { margin: 1rem 0; }
+.small-note { color: #666; font-size: 0.88rem; }
 </style>
 """, unsafe_allow_html=True)
 
