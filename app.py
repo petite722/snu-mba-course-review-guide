@@ -39,7 +39,7 @@ if lang == "한국어":
     highlights = "후기에서 정리한 내용"
     reviews_word = "후기"
     based_word = "기준"
-    final_note = "한국어/영어 후기를 합산한 같은 데이터가 언어만 바뀌어 표시됩니다. 문구를 수정하려면 source_summary_workbook.xlsx의 한국어 원문 데이터를 수정한 뒤 앱 데이터를 다시 생성하면 됩니다."
+    final_note = "한국어/영어 후기를 합산한 같은 데이터가 언어만 바뀌어 표시됩니다."
 else:
     st.caption("This guide is an unofficial summary based on course reviews from the 2025 MBA cohort. Original review texts and past exam materials are not included.")
     download_label = "Download full course list"
@@ -51,7 +51,7 @@ else:
     highlights = "Review highlights"
     reviews_word = "reviews"
     based_word = "based on"
-    final_note = "The Korean and English views are based on the same combined review data. Only the display language changes. To edit wording, update the source summary workbook and regenerate the app data."
+    final_note = "The Korean and English views are based on the same combined review data. Only the display language changes."
 
 if CSV_PATH.exists():
     st.download_button(
