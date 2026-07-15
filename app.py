@@ -72,8 +72,19 @@ if not filtered:
     st.warning(no_result)
     st.stop()
 
-options = [c["display"] for c in filtered]
+placeholder = "수업을 선택하세요" if lang == "한국어" else "Select a course"
+options = [placeholder] + [c["display"] for c in filtered]
+
 selected_display = st.selectbox(select_label, options)
+
+if selected_display == placeholder:
+    st.info(
+        "궁금한 수업을 검색하거나 목록에서 선택해 주세요."
+        if lang == "한국어"
+        else "Search for a course or select one from the list."
+    )
+    st.stop()
+
 course = next(c for c in filtered if c["display"] == selected_display)
 meta = course["meta"]
 data = course["ko"] if lang == "한국어" else course["en"]
@@ -101,4 +112,3 @@ else:
             st.markdown(f"- {bullet}")
 
 st.divider()
-st.caption(final_note)
