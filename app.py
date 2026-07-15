@@ -73,17 +73,24 @@ if not filtered:
     st.stop()
 
 placeholder = "수업을 선택하세요" if lang == "한국어" else "Select a course"
-options = [placeholder] + [c["display"] for c in filtered]
 
-selected_display = st.selectbox(select_label, options)
+# 검색어를 입력한 경우: 검색 결과가 바로 선택되도록 함
+if query.strip():
+    options = [c["display"] for c in filtered]
+    selected_display = st.selectbox(select_label, options, index=0)
 
-if selected_display == placeholder:
-    st.info(
-        "궁금한 수업을 검색하거나 목록에서 선택해 주세요."
-        if lang == "한국어"
-        else "Search for a course or select one from the list."
-    )
-    st.stop()
+# 검색어가 없는 첫 화면: 안내 문구만 먼저 보여줌
+else:
+    options = [placeholder] + [c["display"] for c in filtered]
+    selected_display = st.selectbox(select_label, options, index=0)
+
+    if selected_display == placeholder:
+        st.info(
+            "궁금한 수업을 검색하거나 목록에서 선택해 주세요."
+            if lang == "한국어"
+            else "Search for a course or select one from the list."
+        )
+        st.stop()
 
 course = next(c for c in filtered if c["display"] == selected_display)
 meta = course["meta"]
